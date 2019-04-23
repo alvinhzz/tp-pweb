@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style type="text/css">
+      @import url(style.css);
+    </style>
+
+<body>
+<div class="w3-content w3-section">
+  <img class="mySlides" src="garuda.jpg" >
+  <img class="mySlides" src="asia.png" >
+  <img class="mySlides" src="batik.png">
+  <img class="mySlides" src="wings.png">
+  <img class="mySlides" src="sriwijaya.png">
+  <img class="mySlides" src="citilink.jpg">
+</div>
+ <h1 align="center">Pesan sekarang juga, senin harga naik!!</h1>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000);
+}
+    h1Node = document.querySelector("h1");
+
+    function buatEfek(){
+      if (h1Node.style.color === "red"){
+        h1Node.style.color = "yellow";
+      }
+      else {
+        h1Node.style.color = "red";
+      }
+    }
+
+    setInterval(buatEfek,200);
+</script>
+</body>
+</html>
